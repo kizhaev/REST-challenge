@@ -6,8 +6,6 @@ package com.kizhaevv.challenge.deutsche.domain;
 public class Shop {
     private String shopName;
     private Address shopAddress;
-    private String shopLongitude;
-    private String shopLatitude;
 
     public String getShopName() {
         return shopName;
@@ -25,19 +23,22 @@ public class Shop {
         this.shopAddress = shopAddress;
     }
 
-    public String getShopLongitude() {
-        return shopLongitude;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Shop shop = (Shop) o;
+
+        if (shopName != null ? !shopName.equals(shop.shopName) : shop.shopName != null) return false;
+        return shopAddress != null ? shopAddress.equals(shop.shopAddress) : shop.shopAddress == null;
+
     }
 
-    public void setShopLongitude(String shopLongitude) {
-        this.shopLongitude = shopLongitude;
-    }
-
-    public String getShopLatitude() {
-        return shopLatitude;
-    }
-
-    public void setShopLatitude(String shopLatitude) {
-        this.shopLatitude = shopLatitude;
+    @Override
+    public int hashCode() {
+        int result = shopName != null ? shopName.hashCode() : 0;
+        result = 31 * result + (shopAddress != null ? shopAddress.hashCode() : 0);
+        return result;
     }
 }

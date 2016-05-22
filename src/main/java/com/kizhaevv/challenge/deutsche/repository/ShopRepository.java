@@ -1,14 +1,15 @@
 package com.kizhaevv.challenge.deutsche.repository;
 
+import com.kizhaevv.challenge.deutsche.domain.Coordinates;
 import com.kizhaevv.challenge.deutsche.domain.Shop;
 
-import java.util.Set;
+import java.util.Map;
 
 /**
  * @author Vasiliy Kizhaev
  */
 public interface ShopRepository {
-    Set<Shop> getAllShops();
+    Map<Shop, Coordinates> getAllShops();
 
-    void addShop(Shop shop);
+    void addShop(Shop shop, Coordinates coordinates);
 }
