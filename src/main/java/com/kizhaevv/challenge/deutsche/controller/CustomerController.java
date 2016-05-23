@@ -19,6 +19,12 @@ public class CustomerController {
     @Autowired
     private ShopService shopService;
 
+    /**
+     * Searches for the nearest shop to the given position.
+     * @param latitude Position latitude
+     * @param longitude Position longitude
+     * @return Nearest shop to the given position in JSON, including name, address and position of the shop.
+     */
     @RequestMapping(value = "/shop/{lat}/{lng}", method = RequestMethod.GET)
     @ResponseBody
     public Shop getNearestShop(@PathVariable("lat") Double latitude, @PathVariable("lng") Double longitude) {

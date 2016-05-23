@@ -16,6 +16,21 @@ public class RetailManagerController {
     @Autowired
     private ShopService shopService;
 
+    /**
+     * Stores the provided shop
+     * @param shop Shop description in JSON format, e.g.
+     *             <pre>
+     *             {@code
+     *{
+     *                "shopName":"first",
+     *                "shopAddress": {
+     *                  "number":1,
+     *                  "postCode":"CM9 5AF"
+     *                 }
+     *              }
+     *              }
+     *             </pre>
+     */
     @RequestMapping(value = "/shop", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.OK)
     public void addShop(@RequestBody Shop shop) {
