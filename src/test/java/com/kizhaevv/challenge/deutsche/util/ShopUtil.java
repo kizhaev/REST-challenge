@@ -1,7 +1,6 @@
 package com.kizhaevv.challenge.deutsche.util;
 
 import com.kizhaevv.challenge.deutsche.domain.Address;
-import com.kizhaevv.challenge.deutsche.domain.Coordinates;
 import com.kizhaevv.challenge.deutsche.domain.Shop;
 
 /**

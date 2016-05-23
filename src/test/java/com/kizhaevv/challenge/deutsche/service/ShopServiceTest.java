@@ -3,6 +3,7 @@ package com.kizhaevv.challenge.deutsche.service;
 import com.kizhaevv.challenge.deutsche.config.UnitTestConfig;
 import com.kizhaevv.challenge.deutsche.domain.Shop;
 import com.kizhaevv.challenge.deutsche.repository.ShopRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,12 @@ public class ShopServiceTest {
 
     @Autowired
     private ShopRepository shopRepository;
+
+    @Before
+    public void clearRepository() {
+        shopRepository.clear();
+    }
+
 
     @Test
     public void testInitialState() {

@@ -12,4 +12,8 @@ public interface ShopRepository {
     Map<Shop, Coordinates> getAllShops();
 
     void addShop(Shop shop, Coordinates coordinates);
+
+    Shop getShopByCoordinates(Coordinates coordinates);
+
+    void clear();
 }
