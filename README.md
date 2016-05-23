@@ -42,7 +42,11 @@ Search response:
 Running
 --------
 
-Before running the app make sure you pasted you Google API Key to the `google.properties' file. The app uses Google Geocoding API and Google Distance Matrix API.
+Before running the app make sure you pasted you Google API Key to the 
+```
+/src/main/resources/google.properties
+``` 
+file. The app uses Google Geocoding API and Google Distance Matrix API.
 
 To start the app run
 `gradlew bootRun`
@@ -50,7 +54,11 @@ To start the app run
 Testing
 ------- 
 
-Before running the app make sure you pasted you Google API Key to the `google.properties' file. The app uses Google Geocoding API and Google Distance Matrix API.
+Before running the tests make sure you pasted you Google API Key to the Before running the app make sure you pasted you Google API Key to the 
+```
+/src/main/resources/google.properties
+``` 
+file. The app uses Google Geocoding API and Google Distance Matrix API.
 
 To run tests run
 `gradlew test`
