@@ -42,7 +42,7 @@ public class FunctionalTest {
     @Test
     public void testInitialState() {
         assertEquals("CustomerController is expected to return null when no shops stored.", null,
-                customerController.getNearestShop(55, 55));
+                customerController.getNearestShop(55d, 55d));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class FunctionalTest {
         Shop shop = ShopUtil.newShop("1", 1, "1");
 
         retailManagerController.addShop(shop);
-        Shop nearestShop = customerController.getNearestShop(51, 51);
+        Shop nearestShop = customerController.getNearestShop(51d, 51d);
 
         assertEquals("The nearest shop is expected to be equal to the only shop added.", shop, nearestShop);
     }
