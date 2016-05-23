@@ -1,9 +1,11 @@
 package com.kizhaevv.challenge.deutsche.domain;
 
+import java.io.Serializable;
+
 /**
  * @author Vasiliy Kizhaev
  */
-public class Address {
+public class Address implements Serializable {
     private int number;
     private String postCode;
 

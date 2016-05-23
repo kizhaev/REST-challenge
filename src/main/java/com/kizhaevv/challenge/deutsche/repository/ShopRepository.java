@@ -11,7 +11,7 @@ import java.util.Map;
 public interface ShopRepository {
     Map<Shop, Coordinates> getAllShops();
 
-    void addShop(Shop shop, Coordinates coordinates);
+    void addShop(Shop shop);
 
     Shop getShopByCoordinates(Coordinates coordinates);
 

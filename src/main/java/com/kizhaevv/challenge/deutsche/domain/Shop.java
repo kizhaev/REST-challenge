@@ -1,11 +1,14 @@
 package com.kizhaevv.challenge.deutsche.domain;
 
+import java.io.Serializable;
+
 /**
  * @author Vasiliy Kizhaev
  */
-public class Shop {
+public class Shop implements Serializable {
     private String shopName;
     private Address shopAddress;
+    private Coordinates shopCoordinates;
 
     public String getShopName() {
         return shopName;
@@ -21,6 +24,14 @@ public class Shop {
 
     public void setShopAddress(Address shopAddress) {
         this.shopAddress = shopAddress;
+    }
+
+    public Coordinates getShopCoordinates() {
+        return shopCoordinates;
+    }
+
+    public void setShopCoordinates(Coordinates shopCoordinates) {
+        this.shopCoordinates = shopCoordinates;
     }
 
     @Override

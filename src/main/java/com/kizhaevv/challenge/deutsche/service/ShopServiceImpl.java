@@ -25,7 +25,8 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public void addShop(Shop shop) {
         Coordinates coordinates = geocodingService.getCoordinatesForAddress(shop.getShopAddress());
-        shopRepository.addShop(shop, coordinates);
+        shop.setShopCoordinates(coordinates);
+        shopRepository.addShop(shop);
     }
 
     @Override

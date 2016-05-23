@@ -1,4 +1,4 @@
-package com.kizhaevv.challenge.deutsche;
+package com.kizhaevv.challenge.deutsche.util;
 
 import java.util.Comparator;
 

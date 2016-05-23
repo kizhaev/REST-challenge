@@ -6,7 +6,7 @@ import com.google.maps.GeocodingApi;
 import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.LatLng;
-import com.kizhaevv.challenge.deutsche.ArrayUtil;
+import com.kizhaevv.challenge.deutsche.util.ArrayUtil;
 import com.kizhaevv.challenge.deutsche.domain.Address;
 import com.kizhaevv.challenge.deutsche.domain.Coordinates;
 import org.springframework.beans.factory.annotation.Autowired;

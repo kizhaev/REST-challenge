@@ -24,9 +24,9 @@ public class InMemoryShopRepository implements ShopRepository {
     }
 
     @Override
-    public void addShop(Shop shop, Coordinates coordinates) {
-        coordinatesByShop.put(shop, coordinates);
-        shopByCoordinates.put(coordinates, shop);
+    public void addShop(Shop shop) {
+        coordinatesByShop.put(shop, shop.getShopCoordinates());
+        shopByCoordinates.put(shop.getShopCoordinates(), shop);
     }
 
     @Override
